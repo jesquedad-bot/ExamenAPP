@@ -19,29 +19,16 @@
   .progress-fill { height:100%; background:var(--accent); border-radius:2px; transition:width 0.4s ease; width:0%; }
   .progress-text { font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--muted); white-space:nowrap; }
   main { max-width:820px; margin:0 auto; padding:40px 24px 80px; }
-
-  /* PANTALLA DE NOMBRE */
   #name-screen { text-align:center; padding:40px 0; }
   #name-screen h2 { font-size:1.8rem; font-weight:800; margin-bottom:12px; }
   #name-screen p { color:var(--muted); font-family:'IBM Plex Mono',monospace; font-size:0.85rem; margin-bottom:32px; }
   .name-input-wrap { display:flex; flex-direction:column; align-items:center; gap:16px; }
-  #student-name {
-    background:var(--surface); border:2px solid var(--border); border-radius:var(--radius);
-    color:var(--text); font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:600;
-    padding:16px 24px; width:100%; max-width:440px; outline:none; transition:border-color 0.2s;
-    text-align:center;
-  }
+  #student-name { background:var(--surface); border:2px solid var(--border); border-radius:var(--radius); color:var(--text); font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:600; padding:16px 24px; width:100%; max-width:440px; outline:none; transition:border-color 0.2s; text-align:center; }
   #student-name:focus { border-color:var(--accent); }
   #student-name::placeholder { color:var(--muted); font-weight:400; }
-  .btn-start {
-    background:var(--accent); color:#000; font-family:'Syne',sans-serif; font-weight:800;
-    font-size:1rem; padding:16px 40px; border:none; border-radius:var(--radius);
-    cursor:pointer; transition:all 0.2s; letter-spacing:0.5px;
-  }
+  .btn-start { background:var(--accent); color:#000; font-family:'Syne',sans-serif; font-weight:800; font-size:1rem; padding:16px 40px; border:none; border-radius:var(--radius); cursor:pointer; transition:all 0.2s; }
   .btn-start:hover { background:#d4eb00; transform:translateY(-2px); }
   .name-note { font-size:0.75rem; color:var(--muted); font-family:'IBM Plex Mono',monospace; }
-
-  /* QUIZ */
   .question-card { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:32px; display:none; animation:fadeIn 0.3s ease; }
   .question-card.active { display:block; }
   @keyframes fadeIn { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
@@ -63,14 +50,12 @@
   .feedback.correct-fb { background:rgba(71,255,138,0.08); border:1px solid rgba(71,255,138,0.3); color:var(--correct); }
   .feedback.wrong-fb { background:rgba(255,71,71,0.08); border:1px solid rgba(255,71,71,0.3); color:#ff8080; }
   .nav-buttons { display:flex; justify-content:space-between; align-items:center; margin-top:28px; gap:12px; }
-  .btn { font-family:'Syne',sans-serif; font-weight:700; font-size:0.85rem; padding:12px 24px; border-radius:var(--radius); border:none; cursor:pointer; transition:all 0.2s; letter-spacing:0.5px; }
+  .btn { font-family:'Syne',sans-serif; font-weight:700; font-size:0.85rem; padding:12px 24px; border-radius:var(--radius); border:none; cursor:pointer; transition:all 0.2s; }
   .btn-primary { background:var(--accent); color:#000; }
   .btn-primary:hover { background:#d4eb00; transform:translateY(-1px); }
   .btn-secondary { background:transparent; color:var(--muted); border:1px solid var(--border); }
   .btn-secondary:hover { color:var(--text); border-color:var(--muted); }
   .btn:disabled { opacity:0.3; cursor:default; transform:none; }
-
-  /* RESULTADOS */
   #results-screen { display:none; text-align:center; }
   #results-screen.active { display:block; }
   .student-label { font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--accent2); margin-bottom:16px; }
@@ -79,10 +64,10 @@
   .score-label { font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:var(--muted); margin-top:4px; }
   .result-title { font-size:1.6rem; font-weight:800; margin-bottom:8px; }
   .result-sub { color:var(--muted); font-size:0.9rem; margin-bottom:32px; font-family:'IBM Plex Mono',monospace; }
-  .save-status { margin:16px 0; padding:12px 20px; border-radius:var(--radius); font-family:'IBM Plex Mono',monospace; font-size:0.8rem; }
+  .save-status { margin:16px auto; padding:12px 20px; border-radius:var(--radius); font-family:'IBM Plex Mono',monospace; font-size:0.8rem; max-width:400px; }
   .save-status.saving { background:rgba(71,184,255,0.1); border:1px solid rgba(71,184,255,0.3); color:var(--accent2); }
-  .save-status.saved { background:rgba(71,255,138,0.08); border:1px solid rgba(71,255,138,0.3); color:var(--correct); }
-  .save-status.error { background:rgba(255,71,71,0.08); border:1px solid rgba(255,71,71,0.3); color:#ff8080; }
+  .save-status.saved  { background:rgba(71,255,138,0.08); border:1px solid rgba(71,255,138,0.3); color:var(--correct); }
+  .save-status.error  { background:rgba(255,71,71,0.08); border:1px solid rgba(255,71,71,0.3); color:#ff8080; }
   .qr-section { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:32px; margin-top:32px; }
   .qr-section h3 { font-size:1rem; font-weight:700; margin-bottom:8px; color:var(--accent2); }
   .qr-section p { font-size:0.8rem; color:var(--muted); margin-bottom:20px; font-family:'IBM Plex Mono',monospace; }
@@ -108,9 +93,7 @@
   <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
   <span class="progress-text" id="progress-text">0 / 20</span>
 </div>
-
 <main>
-  <!-- PANTALLA NOMBRE -->
   <div id="name-screen">
     <h2>¡Bienvenido! 👋</h2>
     <p>Ingresa tu nombre completo para comenzar el examen</p>
@@ -120,11 +103,7 @@
       <span class="name-note">Tus resultados se guardarán automáticamente al finalizar</span>
     </div>
   </div>
-
-  <!-- QUIZ -->
   <div id="quiz-container" style="display:none"></div>
-
-  <!-- RESULTADOS -->
   <div id="results-screen">
     <div class="student-label" id="student-label">—</div>
     <div class="score-circle">
@@ -145,90 +124,151 @@
 </main>
 
 <script>
-const SHEET_ID = '1hD0ARirMpIZxDY_vkWMcMU0hpcqPqexqi78QUwIp7sQ';
-// Usamos Google Apps Script Web App como intermediario para escribir en el Sheet
-// URL del Web App (se debe crear — ver instrucciones al pie)
 const WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbwMYhb6y8rO_jAFWsdFn5AUUi1X7MjYQZlOHpYl7d-glWOipDYdBa88nXNbOS1DoMOy/exec';
 
-const questions = [
-  { unit:"Unidad I", correct:0, text:"¿Cuál es el propósito principal de la Unidad I de la asignatura?",
+// Banco de preguntas — cada una tiene su respuesta correcta fija en "correctText"
+// Al cargar, las opciones se mezclan aleatoriamente y se recalcula el índice correcto
+const bank = [
+  { unit:"Unidad I",
+    text:"¿Cuál es el propósito principal de la Unidad I de la asignatura?",
+    correctText:"Gestionar datos para evitar la pérdida de información en dispositivos móviles",
     options:["Gestionar datos para evitar la pérdida de información en dispositivos móviles","Diseñar interfaces gráficas para aplicaciones móviles","Conectar aplicaciones móviles a servidores en Internet","Programar sensores embebidos en dispositivos móviles"],
     explanation:"La Unidad I tiene como propósito que el alumno gestione datos para evitar la pérdida de información en dispositivos móviles." },
-  { unit:"Unidad I", correct:1, text:"¿Qué tipos de bases de datos contempla la asignatura para la conexión desde aplicaciones móviles?",
+  { unit:"Unidad I",
+    text:"¿Qué tipos de bases de datos contempla la asignatura para conexión desde apps móviles?",
+    correctText:"Estáticas, dinámicas, web y locales",
     options:["Solo bases de datos relacionales en la nube","Estáticas, dinámicas, web y locales","Únicamente bases de datos NoSQL","Solo bases de datos en memoria RAM"],
     explanation:"Los temas contemplan conexión a bases de datos estáticos, dinámicos, web y locales en dispositivos móviles." },
-  { unit:"Unidad I", correct:2, text:"¿Cuáles son los tipos de persistencia de datos identificados en la asignatura?",
+  { unit:"Unidad I",
+    text:"¿Cuáles son los tipos de persistencia de datos identificados en la asignatura?",
+    correctText:"Local, remota y de Cacheo/Hoarding",
     options:["Relacional, NoSQL y orientada a objetos","Síncrona, asíncrona y en tiempo real","Local, remota y de Cacheo/Hoarding","Privada, pública y compartida"],
-    explanation:"Los tipos de persistencia vistos son: local, remota y de Cacheo/Hoarding en dispositivos móviles." },
-  { unit:"Unidad I", correct:3, text:"¿Cuál de los siguientes es un reto típico de la persistencia en dispositivos móviles?",
+    explanation:"Los tipos de persistencia son: local, remota y de Cacheo/Hoarding en dispositivos móviles." },
+  { unit:"Unidad I",
+    text:"¿Cuál de los siguientes es un reto típico de la persistencia en dispositivos móviles?",
+    correctText:"Dificultad de sincronización y operación en modo off-line",
     options:["Exceso de memoria RAM en los dispositivos modernos","Alta velocidad de conexión constante a internet","Sobra de espacio de almacenamiento interno","Dificultad de sincronización y operación en modo off-line"],
     explanation:"Entre los retos se incluyen lentitud en consultas, alto consumo de batería, dificultad de sincronización y modo off-line." },
-  { unit:"Unidad I", correct:0, text:"¿Qué es el modelado de objetos de acceso a datos en dispositivos móviles?",
+  { unit:"Unidad I",
+    text:"¿Qué es el modelado de objetos de acceso a datos en dispositivos móviles?",
+    correctText:"La representación estructurada de cómo se accede y organiza la información en apps móviles",
     options:["La representación estructurada de cómo se accede y organiza la información en apps móviles","Un proceso de diseño de interfaces gráficas de usuario","Un protocolo de comunicación inalámbrica entre dispositivos","Un método para comprimir imágenes en aplicaciones móviles"],
-    explanation:"El modelado de objetos de acceso a datos define cómo se estructuran y acceden los datos dentro de las aplicaciones móviles." },
-  { unit:"Unidad I", correct:1, text:"¿Qué debe incluir el portafolio de evidencias de la Unidad I?",
+    explanation:"El modelado de objetos de acceso a datos define cómo se estructuran y acceden los datos en las aplicaciones móviles." },
+  { unit:"Unidad I",
+    text:"¿Qué debe incluir el portafolio de evidencias de la Unidad I?",
+    correctText:"Modelado de objetos, código funcional con BD, persistencia y mecanismos de tolerancia a fallos",
     options:["Solo capturas de pantalla de la aplicación terminada","Modelado de objetos, código funcional con BD, persistencia y mecanismos de tolerancia a fallos","Únicamente el diagrama de clases del sistema","Solo el reporte de pruebas de usuario final"],
-    explanation:"La evidencia de la Unidad I incluye modelado de objetos, código funcional con conexión a BD, persistencia y mecanismos de tolerancia a fallos." },
-  { unit:"Unidad II", correct:2, text:"¿Cuál es el propósito de la Unidad II sobre Arquitectura Cliente-Servidor?",
+    explanation:"La evidencia de la Unidad I incluye modelado de objetos, código funcional con BD, persistencia y tolerancia a fallos." },
+  { unit:"Unidad II",
+    text:"¿Cuál es el propósito de la Unidad II sobre Arquitectura Cliente-Servidor?",
+    correctText:"Integrar arquitectura cliente-servidor, multimedia e interacción gráfica para optimizar apps móviles",
     options:["Diseñar bases de datos relacionales para aplicaciones móviles","Programar sensores embebidos en dispositivos móviles","Integrar arquitectura cliente-servidor, multimedia e interacción gráfica para optimizar apps móviles","Gestionar únicamente la persistencia local de datos"],
-    explanation:"La Unidad II busca que el alumno integre arquitectura cliente-servidor, elementos multimedia y de interacción gráfica para optimizar aplicaciones móviles." },
-  { unit:"Unidad II", correct:3, text:"¿Qué es un cliente ligero en el contexto de aplicaciones móviles?",
+    explanation:"La Unidad II busca que el alumno integre arquitectura cliente-servidor, multimedia e interacción gráfica para optimizar apps móviles." },
+  { unit:"Unidad II",
+    text:"¿Qué es un cliente ligero en el contexto de aplicaciones móviles?",
+    correctText:"Una app que delega la mayor parte del procesamiento al servidor",
     options:["Un dispositivo móvil con poca memoria RAM","Un servidor de bajo consumo energético","Una aplicación que solo funciona sin conexión a internet","Una app que delega la mayor parte del procesamiento al servidor"],
-    explanation:"Los clientes ligeros son aplicaciones que delegan gran parte del procesamiento al servidor, minimizando la carga en el dispositivo móvil." },
-  { unit:"Unidad II", correct:0, text:"¿Qué tipos de conexiones a servidor contempla la Unidad II?",
+    explanation:"Los clientes ligeros delegan gran parte del procesamiento al servidor, minimizando la carga en el dispositivo móvil." },
+  { unit:"Unidad II",
+    text:"¿Qué tipos de conexiones a servidor contempla la Unidad II?",
+    correctText:"Conexión a bases de datos web y a servidores de aplicaciones en Internet",
     options:["Conexión a bases de datos web y a servidores de aplicaciones en Internet","Solo conexión Bluetooth entre dispositivos cercanos","Únicamente conexión por cable USB al servidor","Solo redes locales de área (LAN)"],
     explanation:"Se contempla la programación de conexiones a bases de datos web y a servidores de aplicaciones en Internet." },
-  { unit:"Unidad II", correct:1, text:"¿Qué se trabaja en el tema de Multimedia e interacción gráfica de la Unidad II?",
+  { unit:"Unidad II",
+    text:"¿Qué se trabaja en el tema de Multimedia e interacción gráfica de la Unidad II?",
+    correctText:"Selección y programación de elementos multimedia e interacción gráfica según requerimientos",
     options:["Algoritmos de cifrado y seguridad de datos en tránsito","Selección y programación de elementos multimedia e interacción gráfica según requerimientos","Configuración de redes VPN para dispositivos móviles","Gestión de memoria caché y almacenamiento temporal"],
-    explanation:"El tema incluye seleccionar y programar elementos multimedia y de interacción gráfica de acuerdo a los requerimientos del proyecto." },
-  { unit:"Unidad II", correct:2, text:"¿Cuántas horas presenciales tiene en total la Unidad II de la asignatura?",
+    explanation:"El tema incluye seleccionar y programar elementos multimedia y de interacción gráfica según los requerimientos del proyecto." },
+  { unit:"Unidad II",
+    text:"¿Cuántas horas presenciales tiene en total la Unidad II?",
+    correctText:"20 horas presenciales",
     options:["25 horas presenciales","30 horas presenciales","20 horas presenciales","15 horas presenciales"],
     explanation:"La Unidad II tiene 20 horas presenciales en total (8 del saber + 12 del saber hacer)." },
-  { unit:"Unidad II", correct:3, text:"¿Qué debe contener el portafolio de evidencias de la Unidad II?",
+  { unit:"Unidad II",
+    text:"¿Qué debe contener el portafolio de evidencias de la Unidad II?",
+    correctText:"Código funcional con clientes ligeros, conexión a BD web, servidores en Internet y multimedia",
     options:["Solo el diagrama de arquitectura del sistema","Únicamente el manual de usuario de la aplicación","Solo pruebas de rendimiento de la aplicación móvil","Código funcional con clientes ligeros, conexión a BD web, servidores en Internet y multimedia"],
-    explanation:"La evidencia incluye clientes ligeros, conexión a BD web, conexión a servidores en Internet y elementos multimedia e interacción gráfica." },
-  { unit:"Unidad III", correct:0, text:"¿Cuál es el propósito de la Unidad III sobre uso de tecnologías para móviles?",
+    explanation:"La evidencia incluye clientes ligeros, conexión a BD web, servidores en Internet y elementos multimedia." },
+  { unit:"Unidad III",
+    text:"¿Cuál es el propósito de la Unidad III sobre uso de tecnologías para móviles?",
+    correctText:"Programar aplicaciones dependientes de contexto para mejorar la interacción con los usuarios",
     options:["Programar aplicaciones dependientes de contexto para mejorar la interacción con los usuarios","Administrar bases de datos remotas en la nube empresarial","Diseñar arquitecturas cliente-servidor avanzadas","Implementar algoritmos de inteligencia artificial en móviles"],
-    explanation:"La Unidad III busca que el alumno programe aplicaciones dependientes de contexto para mejorar la interacción de los dispositivos móviles con los usuarios." },
-  { unit:"Unidad III", correct:1, text:"¿Qué es una aplicación móvil dependiente del contexto?",
+    explanation:"La Unidad III busca que el alumno programe aplicaciones dependientes de contexto para mejorar la interacción con los usuarios." },
+  { unit:"Unidad III",
+    text:"¿Qué es una aplicación móvil dependiente del contexto?",
+    correctText:"Una aplicación que adapta su comportamiento según información del entorno como ubicación o sensores",
     options:["Una app que solo funciona con conexión WiFi de alta velocidad","Una aplicación que adapta su comportamiento según información del entorno como ubicación o sensores","Una aplicación que requiere autenticación biométrica obligatoria","Una app diseñada exclusivamente para funcionar en modo offline"],
-    explanation:"Las aplicaciones dependientes de contexto adaptan su comportamiento según factores del entorno, como la geolocalización o datos de sensores." },
-  { unit:"Unidad III", correct:2, text:"¿Qué tecnología de contexto se menciona explícitamente en la Unidad III?",
+    explanation:"Las apps dependientes de contexto adaptan su comportamiento según factores del entorno, como geolocalización o sensores." },
+  { unit:"Unidad III",
+    text:"¿Qué tecnología de contexto se menciona explícitamente en la Unidad III?",
+    correctText:"Geolocalización en aplicaciones móviles",
     options:["Realidad aumentada para visualización 3D","Reconocimiento facial biométrico","Geolocalización en aplicaciones móviles","Inteligencia artificial generativa"],
     explanation:"La geolocalización se menciona explícitamente como uso de aplicaciones dependientes de contexto en móviles." },
-  { unit:"Unidad III", correct:3, text:"¿Qué son los sensores embebidos en dispositivos móviles?",
+  { unit:"Unidad III",
+    text:"¿Qué son los sensores embebidos en dispositivos móviles?",
+    correctText:"Componentes de hardware integrados que detectan información del entorno físico",
     options:["Aplicaciones de terceros instaladas en el sistema operativo","Módulos de software para encriptación de datos personales","Protocolos de comunicación inalámbrica entre dispositivos","Componentes de hardware integrados que detectan información del entorno físico"],
-    explanation:"Los sensores embebidos son componentes de hardware integrados en el dispositivo que permiten detectar información del entorno físico." },
-  { unit:"General", correct:0, text:"¿Cuántas horas presenciales tiene la asignatura completa de Programación de Móviles II?",
+    explanation:"Los sensores embebidos son componentes de hardware integrados que permiten detectar información del entorno físico." },
+  { unit:"General",
+    text:"¿Cuántas horas presenciales tiene la asignatura completa de Programación de Móviles II?",
+    correctText:"75 horas presenciales",
     options:["75 horas presenciales","60 horas presenciales","90 horas presenciales","50 horas presenciales"],
     explanation:"La asignatura tiene 75 horas presenciales y 15 no presenciales, para un total de 90 horas." },
-  { unit:"General", correct:1, text:"¿Cuántas Unidades de Aprendizaje componen la asignatura de Programación de Móviles II?",
+  { unit:"General",
+    text:"¿Cuántas Unidades de Aprendizaje componen la asignatura de Programación de Móviles II?",
+    correctText:"3 unidades de aprendizaje",
     options:["2 unidades de aprendizaje","3 unidades de aprendizaje","4 unidades de aprendizaje","5 unidades de aprendizaje"],
-    explanation:"La asignatura está compuesta por 3 Unidades: Administración de datos, Arquitectura Cliente-Servidor y Uso de tecnologías para móviles." },
-  { unit:"General", correct:2, text:"¿A qué cuatrimestre pertenece la asignatura de Programación de Móviles II?",
+    explanation:"La asignatura está compuesta por 3 Unidades: Administración de datos, Arquitectura Cliente-Servidor y Tecnologías para móviles." },
+  { unit:"General",
+    text:"¿A qué cuatrimestre pertenece la asignatura de Programación de Móviles II?",
+    correctText:"Noveno cuatrimestre",
     options:["Séptimo cuatrimestre","Octavo cuatrimestre","Noveno cuatrimestre","Décimo cuatrimestre"],
     explanation:"Según el plan de estudios, la asignatura de Programación de Móviles II pertenece al Noveno cuatrimestre." },
-  { unit:"General", correct:3, text:"¿A qué competencia general contribuye la asignatura de Programación de Móviles II?",
+  { unit:"General",
+    text:"¿A qué competencia general contribuye la asignatura de Programación de Móviles II?",
+    correctText:"Dirigir proyectos de software con base en diagnóstico de necesidades metodológicas",
     options:["Desarrollar bases de datos empresariales a gran escala","Diseñar interfaces de usuario para aplicaciones de escritorio","Administrar redes de comunicaciones corporativas","Dirigir proyectos de software con base en diagnóstico de necesidades metodológicas"],
-    explanation:"La asignatura contribuye a: Dirigir proyectos de software, con base en el diagnóstico de necesidades metodológicas del diseño, pruebas, mantenimiento y gestión." }
+    explanation:"La asignatura contribuye a: Dirigir proyectos de software con base en diagnóstico de necesidades metodológicas del diseño, pruebas, mantenimiento y gestión." }
 ];
 
+// Mezcla aleatoria (Fisher-Yates)
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// Construir preguntas con opciones mezcladas aleatoriamente
+function buildQuestions() {
+  return bank.map(q => {
+    const shuffled = shuffle(q.options);
+    const correctIdx = shuffled.indexOf(q.correctText);
+    return { unit: q.unit, text: q.text, options: shuffled, correct: correctIdx, explanation: q.explanation };
+  });
+}
+
+let questions = [];
 let currentQ = 0;
-let answers = new Array(questions.length).fill(null);
+let answers = [];
 let score = 0;
 let studentName = '';
 
 function startQuiz() {
   const input = document.getElementById('student-name').value.trim();
   if (!input) {
-    document.getElementById('student-name').focus();
     document.getElementById('student-name').style.borderColor = 'var(--wrong)';
+    document.getElementById('student-name').focus();
     return;
   }
   studentName = input;
+  questions = buildQuestions();
+  answers = new Array(questions.length).fill(null);
   document.getElementById('name-screen').style.display = 'none';
   document.getElementById('quiz-container').style.display = 'block';
-  buildQuiz();
+  renderQuiz();
 }
 
 document.getElementById('student-name').addEventListener('keydown', e => {
@@ -236,7 +276,7 @@ document.getElementById('student-name').addEventListener('keydown', e => {
   document.getElementById('student-name').style.borderColor = '';
 });
 
-function buildQuiz() {
+function renderQuiz() {
   const container = document.getElementById('quiz-container');
   container.innerHTML = '';
   questions.forEach((q, i) => {
@@ -259,7 +299,8 @@ function buildQuiz() {
       <div class="feedback" id="fb-${i}"></div>
       <div class="nav-buttons">
         <button class="btn btn-secondary" onclick="navigate(-1)" ${i===0?'disabled':''}>← Anterior</button>
-        <button class="btn btn-primary" id="next-btn-${i}" onclick="${i===questions.length-1?'showResults()':'navigate(1)'}" disabled>
+        <button class="btn btn-primary" id="next-btn-${i}"
+          onclick="${i===questions.length-1?'showResults()':'navigate(1)'}" disabled>
           ${i===questions.length-1?'Ver resultados →':'Siguiente →'}
         </button>
       </div>`;
@@ -303,13 +344,12 @@ function showResults() {
   document.getElementById('score-num').textContent = score;
   const pct = score / questions.length;
   let title, sub;
-  if (pct >= 0.9)      { title='¡Excelente dominio!';   sub='Tienes bases sólidas para la asignatura.'; }
-  else if (pct >= 0.7) { title='Buen desempeño';        sub='Refuerza algunos conceptos clave.'; }
-  else if (pct >= 0.5) { title='Conocimiento básico';   sub='Se recomienda revisar los temas con más detalle.'; }
-  else                 { title='Área de oportunidad';   sub='Es importante repasar los fundamentos de la asignatura.'; }
+  if (pct >= 0.9)      { title='¡Excelente dominio!';  sub='Tienes bases sólidas para la asignatura.'; }
+  else if (pct >= 0.7) { title='Buen desempeño';       sub='Refuerza algunos conceptos clave.'; }
+  else if (pct >= 0.5) { title='Conocimiento básico';  sub='Se recomienda revisar los temas con más detalle.'; }
+  else                 { title='Área de oportunidad';  sub='Es importante repasar los fundamentos de la asignatura.'; }
   document.getElementById('result-title').textContent = title;
   document.getElementById('result-sub').textContent = sub + ` (${score}/20 correctas)`;
-
   const grid = document.getElementById('review-grid');
   answers.forEach((a, i) => {
     const cell = document.createElement('div');
@@ -317,12 +357,10 @@ function showResults() {
     cell.textContent = i + 1;
     grid.appendChild(cell);
   });
-
   new QRCode(document.getElementById('qrcode'), {
     text: window.location.href, width:160, height:160,
     colorDark:'#000000', colorLight:'#ffffff'
   });
-
   saveToSheet();
 }
 
@@ -332,19 +370,17 @@ async function saveToSheet() {
   const fecha = now.toLocaleDateString('es-MX');
   const hora  = now.toLocaleTimeString('es-MX');
   const detalle = answers.map((a,i) => a === questions[i].correct ? '✓' : '✗').join(' ');
-
   const payload = {
     nombre: studentName,
     fecha: fecha,
     hora: hora,
     puntaje: score,
     total: questions.length,
-    porcentaje: Math.round(score/questions.length*100) + '%',
+    porcentaje: Math.round(score / questions.length * 100) + '%',
     detalle: detalle
   };
-
   try {
-    const res = await fetch(WEBAPP_URL, {
+    await fetch(WEBAPP_URL, {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
@@ -359,7 +395,8 @@ async function saveToSheet() {
 }
 
 function restartQuiz() {
-  currentQ = 0; answers = new Array(questions.length).fill(null); score = 0; studentName = '';
+  currentQ = 0; score = 0; studentName = '';
+  answers = [];
   document.getElementById('results-screen').classList.remove('active');
   document.getElementById('results-screen').innerHTML = `
     <div class="student-label" id="student-label">—</div>
@@ -369,7 +406,9 @@ function restartQuiz() {
     <div class="save-status saving" id="save-status">⏳ Guardando resultados...</div>
     <div class="review-grid" id="review-grid"></div>
     <button class="btn-restart" onclick="restartQuiz()">↺ Nuevo intento</button>
-    <div class="qr-section"><h3>📱 Comparte este examen</h3><p>Escanea el QR para acceder desde cualquier dispositivo</p><div id="qrcode"></div></div>`;
+    <div class="qr-section"><h3>📱 Comparte este examen</h3>
+    <p>Escanea el QR para acceder desde cualquier dispositivo</p>
+    <div id="qrcode"></div></div>`;
   document.getElementById('quiz-container').style.display = 'none';
   document.getElementById('name-screen').style.display = 'block';
 }
