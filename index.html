@@ -367,25 +367,19 @@ function showResults() {
 async function saveToSheet() {
   const status = document.getElementById('save-status');
   const now = new Date();
-  const fecha = now.toLocaleDateString('es-MX');
-  const hora  = now.toLocaleTimeString('es-MX');
   const detalle = answers.map((a,i) => a === questions[i].correct ? '✓' : '✗').join(' ');
-
   const params = new URLSearchParams({
+    examen:     'Programación de Móviles II',
     nombre:     studentName,
-    fecha:      fecha,
-    hora:       hora,
+    fecha:      now.toLocaleDateString('es-MX'),
+    hora:       now.toLocaleTimeString('es-MX'),
     puntaje:    score,
     total:      questions.length,
     porcentaje: Math.round(score / questions.length * 100) + '%',
     detalle:    detalle
   });
-
   try {
-    await fetch(WEBAPP_URL + '?' + params.toString(), {
-      method: 'GET',
-      mode: 'no-cors'
-    });
+    await fetch(WEBAPP_URL + '?' + params.toString(), { method:'GET', mode:'no-cors' });
     status.className = 'save-status saved';
     status.textContent = '✓ Resultados guardados en Google Sheets';
   } catch(e) {
